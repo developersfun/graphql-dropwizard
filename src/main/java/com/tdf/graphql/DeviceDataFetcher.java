@@ -10,7 +10,6 @@ import org.hibernate.SessionFactory;
 
 import javax.inject.Inject;
 
-
 public class DeviceDataFetcher {
 
     private DeviceDAO deviceDAO;
@@ -22,7 +21,6 @@ public class DeviceDataFetcher {
 
     public DataFetcher getAllResumeData() {
         return dataFetchingEnvironment -> {
-            //String dev = dataFetchingEnvironment.getArgument("device_id");
             return deviceDAO.findAll();
         };
     }

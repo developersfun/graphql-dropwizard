@@ -58,7 +58,7 @@ public class DeviceDAO extends AbstractDAO<Device> {
         CriteriaQuery<Device> cq = builder.createQuery(Device.class);
         Root<Device> d = cq.from(Device.class);
 
-        cq =  cq.select(d).where(builder.like(d.<String>get("device_id"),id));
+        cq =  cq.select(d).where(builder.like(d.get("device_id"),id));
 
         try{
             return list(cq).get(0);
@@ -78,7 +78,7 @@ public class DeviceDAO extends AbstractDAO<Device> {
         out.println("LIST STARTED...........");
         list(cq.select(d).where(builder.equal(d.<String>get("device_name"),name))).stream().forEach(out::println);
 
-        cq =  cq.select(d).where(builder.like(d.<String>get("device_name"),"%"+name+"%"));
+        cq =  cq.select(d).where(builder.like(d.get("device_name"),"%"+name+"%"));
 
 
         try{
