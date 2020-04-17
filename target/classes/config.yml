@@ -1,0 +1,20 @@
+server:
+  type: simple
+  connector:
+    type: http
+    port: 8080
+
+database:
+  driverClass : com.mysql.jdbc.Driver
+  url: 'jdbc:mysql://localhost:3306/dummyDB'
+  user: root
+  password: root
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: true
+

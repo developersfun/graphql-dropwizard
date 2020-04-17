@@ -1,0 +1,9 @@
+MainApp$1.class
+MainApp.class
+com/tdf/Device.class
+com/tdf/Config.class
+com/tdf/graphql/MyGraphQLSchema.class
+com/tdf/DeviceDAO.class
+com/tdf/MyController.class
+com/tdf/MyRegexMatch.class
+com/tdf/graphql/DeviceDataFetcher.class

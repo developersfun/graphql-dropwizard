@@ -1,0 +1,16 @@
+schema{
+    query:Query
+}
+
+type Query {
+    deviceByBrand(device_brand:String): Device
+    devices : [Device]
+}
+
+type Device {
+    device_id:String
+    device_name:String
+    device_brand:String
+    serial_number:String
+    model:String
+}
